@@ -15,8 +15,6 @@ To get started, run the following commands in your project folder:
 ```shell
 cp config/dev.exs.example config/dev.exs  # creates the project's configuration file
 mix deps.get  # installs the dependencies
-mix ecto.create  # creates the database.
-mix ecto.migrate  # run the database migrations.
 mix que.setup # If you are using persistence option for que job processing
 mix phx.server  # run the application.
 OR
@@ -80,3 +78,18 @@ Romulus.Repo.insert!(%Romulus.Todo{item: "Hello1", title: "test"})
 Seeding data
 
 https://www.phoenixframework.org/blog/seeding-data
+
+
+# Using the API
+
+POST to /users
+
+```
+{
+	"user": {
+		"username":"9999",
+		"email":"99999@gmail.com",
+		"password":"test"
+	}
+}
+```
