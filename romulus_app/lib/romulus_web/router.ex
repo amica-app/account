@@ -21,8 +21,5 @@ defmodule RomulusWeb.Router do
     put("/user", UserController, :update)
     post("/users", UserController, :create)
     post("/users/login", SessionController, :create)
-
-    get("/search/:username", ProfileController, :index)
-    get("/profiles/:username", ProfileController, :getprofile)
   end
 end
